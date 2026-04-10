@@ -16,5 +16,5 @@ dependencyResolutionManagement {
 rootProject.name = "MNC Identifier SDK"
 // include ':app'
 // include ':face-detection'
-include ':ocr'
 include ':core'
+include ':ocr'

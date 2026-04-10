@@ -85,8 +85,8 @@ afterEvaluate {
             aar(MavenPublication) {
                 from components.findByName('release')
                 groupId = 'id.mncinnovation'
-                artifactId = project.getName()
-                version = '1.1.0'
+                artifactId = 'ocr'
+                version = '1.1.1'
             }
         }
     }
