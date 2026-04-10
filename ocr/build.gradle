@@ -9,11 +9,11 @@ def VERSION_CODE = getVersionCode()
 def VERSION_NAME = getVersionName()
 
 android {
-    compileSdk 31
+    compileSdk 36
 
     defaultConfig {
         minSdk 21
-        targetSdk 31
+        targetSdk 36
         versionCode 1
         versionName "1.0"
 
@@ -38,6 +38,11 @@ android {
     buildFeatures {
         viewBinding true
     }
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
 }
 
 dependencies {
@@ -53,7 +58,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0")
-    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:18.0.2'
+    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:19.0.0'
     implementation 'com.google.mlkit:object-detection-custom:17.0.0'
     // CameraX core library using camera2 implementation
     implementation "androidx.camera:camera-camera2:$camerax_version"
