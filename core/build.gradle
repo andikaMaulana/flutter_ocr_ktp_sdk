@@ -10,8 +10,8 @@ def VERSION_CODE = getVersionCode()
 def VERSION_NAME = getVersionName()
 
 android {
+    namespace 'com.github.andikamaulana.core'
     compileSdk 31
-
     defaultConfig {
         minSdk 21
         targetSdk 31
@@ -33,6 +33,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    buildFeatures {
+        buildConfig = true
     }
 }
 
@@ -63,10 +66,10 @@ afterEvaluate {
     publishing {
         publications {
             aar(MavenPublication) {
-                from components.release
-                groupId = groupId
+                from components.findByName('release')
+                groupId = 'com.github.andikaMaulana'
                 artifactId = project.getName()
-                version = VERSION_NAME
+                version = '1.0.2'
             }
         }
     }
