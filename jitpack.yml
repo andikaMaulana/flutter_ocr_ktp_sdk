@@ -4,3 +4,6 @@ before_install:
   - chmod +x gradlew
 install:
   - ./gradlew :core:assembleRelease :ocr:assembleRelease -x test
+artifacts:
+  - "core/build/outputs/aar/*.aar"
+  - "ocr/build/outputs/aar/*.aar"
