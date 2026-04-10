@@ -10,7 +10,7 @@ def VERSION_CODE = getVersionCode()
 def VERSION_NAME = getVersionName()
 
 android {
-    namespace 'com.github.andikamaulana.core'
+    namespace 'id.mncinnovation.core'
     compileSdk 31
     defaultConfig {
         minSdk 21
@@ -67,7 +67,7 @@ afterEvaluate {
         publications {
             aar(MavenPublication) {
                 from components.findByName('release')
-                groupId = 'com.github.andikaMaulana'
+                groupId = 'id.mncinnovation'
                 artifactId = project.getName()
                 version = '1.0.2'
             }
