@@ -10,7 +10,7 @@ def VERSION_CODE = getVersionCode()
 def VERSION_NAME = getVersionName()
 
 android {
-    namespace 'id.mncinnovation.core'
+    namespace 'id.mncinnovation.identification.core'
     compileSdk 31
     defaultConfig {
         minSdk 21
